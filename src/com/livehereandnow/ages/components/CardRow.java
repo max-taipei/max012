@@ -43,7 +43,7 @@ public class CardRow {
         ageICivilCards = cards.get某時代內政牌(1);
 
         ageA內政牌 = cards.get某時代內政牌(0);//DEBUG 暫用時代1
-   //     ageA內政牌 = cards.get測試牌(1);//DEBUG 暫用時代1
+      // ageA內政牌 = cards.get測試牌(1);//DEBUG 暫用時代1
         cardRow = new ArrayList<>();
 
         Collections.shuffle(ageA內政牌);
@@ -70,7 +70,7 @@ public class CardRow {
     private void addCardsStep1() {
         switch (playerCnt) {
 
-            case 2:
+            case 2://2人時會移除三張牌
                 cardRow.remove(0);
             case 3:
                 cardRow.remove(0);
@@ -90,13 +90,13 @@ public class CardRow {
     }
 
     private void addCardsStep3() throws AgesException {
-        if (round == 2) {
-            while (cardRow.size() < 13) {
-                cardRow.add(ageA內政牌.get(0));
-                ageA內政牌.remove(0);
-            }
-        }
-        if (round > 2) {
+//        if (round == 2) {
+//            while (cardRow.size() < 13) {
+//                cardRow.add(ageA內政牌.get(0));
+//                ageA內政牌.remove(0);
+//            }
+//        }
+        if (round >= 2) {
           while (cardRow.size() < 13) {
                 cardRow.add(ageICivilCards.get(0));
                 ageICivilCards.remove(0);

@@ -105,28 +105,34 @@ public class Engine {
     public boolean doVersion() {
 
         System.out.println();
+                System.out.println("  === ver 0.58 ===  2014-4-29, 10:51, by Max　");
+        System.out.println("    1. 修正*DEBUG 時代A的6張沒有被移除，仍然出現在第一次補牌 ");
+        System.out.println("    ");
+                System.out.println("  === ver 0.57.1 ===  2014-4-29, 10:00, by Max　");
+        System.out.println("    1. *DEBUG 時代A的6張沒有被移除，仍然出現在第一次補牌 ");
+        System.out.println();
 
         System.out.println("  === ver 0.57 ===  2014-4-29, 10:00, by Max　");
         System.out.println("    1. *預設牌庫及事件顯現位置 ");
         System.out.println();
         System.out.println("  === ver 0.56 ===  2014-4-28, 22:30, by Mark　");
-        System.out.println("    1. ****secured maximum card numbers on-hand **** ");
+        System.out.println("    1. ****secured maximum card numbers on-hand **** 設定手牌上限值");
         System.out.println();
 
         System.out.println("  === ver 0.55 ===  2014-4-28, 22:10, by Mark　");
-        System.out.println("    1. ****secured cards be held for one round using RoundNumber on Card**** ");
+        System.out.println("    1. ****secured cards be held for one round using RoundNumber on Card**** 進手牌當輪不能打出");
         System.out.println();
 
         System.out.println("  === ver 0.54 ===  2014-4-28, 21:20, by Mark　");
         System.out.println("    1. change Government holder to be Card ");
-        System.out.println("    2. also fix 農場 and 礦山 doProduction");
+        System.out.println("    2. also fix 農場 and 礦山 doProduction 修正農場和礦山的生產方式");
         System.out.println();
         System.out.println("  === ver 0.53 ===  2014-4-28, 20:20, by Mark　");
-        System.out.println("    1. secure not allow repeat leader within the same age ");
+        System.out.println("    1. secure not allow repeat leader within the same age 時代領袖");
         System.out.println("    2. new LeaderDeck class with ages:**23 layout");
         System.out.println();
         System.out.println("  === ver 0.52 ===  2014-4-28, 17:00, by Mark　");
-        System.out.println("    1. basic population/increase-poluation ");
+        System.out.println("    1. basic population/increase-poluation 增加人口");
         System.out.println();
         System.out.println("  === ver 0.51 ===  2014-4-28, 16:30, by Mark　");
         System.out.println("    1. to show all components on player's side");
