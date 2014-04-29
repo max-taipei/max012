@@ -38,7 +38,7 @@ public class EngineCore {
     int[] CARD_POINT = {1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3};
 
     private CardRow cardRow;
-
+     private Cards cards;
 //  待優化  
 //    private List<Card> 玩家1手牌;
 //    private List<Card> 玩家1桌牌;
@@ -210,6 +210,14 @@ public class EngineCore {
         return true;
     }
 
+      public boolean doDebug() throws AgesException {
+          System.out.println("手牌上限值的定義，為當前板塊上的內政點數和，由Cards列出所有相關的牌");
+//          cards.show和手牌數相關的牌();
+          Cards xxx=new Cards();
+          System.out.println("----------------------------------------------");
+          xxx.show和手牌數相關的牌();
+          return true;
+    }
     public boolean doIncreasePopulation() throws AgesException {
         return get當前玩家().doIncreasePolutaion();
     }
@@ -301,6 +309,7 @@ public boolean doRevolution() throws AgesException {
     }
 
     public boolean doHelp() {
+        System.out.println("debug  列出正在開發中的信息  ");
         System.out.println("\n=== basic commands === (start)");
         System.out.println("population  ");
         System.out.println("   help         this command");

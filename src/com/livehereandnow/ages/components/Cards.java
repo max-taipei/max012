@@ -65,6 +65,38 @@ public class Cards implements CardType {
         return cards;
     }
 
+    public void show和手牌數相關的牌() {
+        System.out.println("顯示出get和手牌數相關的牌()");
+//        System.out.println("335678" + this.get和手牌數相關的牌().size());
+//        this.get和手牌數相關的牌().get(內政).get卡名()
+        for(Card card:get和手牌數相關的牌()){
+            System.out.println(card.toString(9));
+        }
+//return ;
+    }
+
+    public List<Card> get和手牌數相關的牌() {
+        List<Card> list = new ArrayList<>();
+
+             //        cards.add(new Card(5, "漢摩拉比", 0, 內政, 領袖, 綠色, "領袖", "內政點數+1，軍事點數-1", "0"));
+//        cards.add(new Card(9, "金字塔", 0, 內政, 奇蹟, 紫色, "奇蹟", "內政點數+1", "3,2,1"));
+//        cards.add(new Card(10, "專制", 0, 內政, 科技, 橙色, "政府", "內政點數+4，軍事點數+2", "0"));
+//         cards.add(new Card(6, "亞歷山大圖書館", 0, 內政, 奇蹟, 紫色, "奇蹟", "科技生產+1，文化生產+1，內政手牌上限+1，軍事手牌上限+1", "1,2,2,1"));
+//        cards.add(new Card(54, "法典", 1, 內政, 科技, 藍色, "內政", "內政點數+1", "6"));
+        for (int k = 0; k < cards.size(); k++) {
+            if ((cards.get(k).get右上().equals("政府"))) {
+                list.add(cards.get(k));
+            }
+        }
+        
+        list.add(new Card(5, "漢摩拉比", 0, 內政, 領袖, 綠色, "領袖", "內政點數+1，軍事點數-1", "0"));
+        list.add(new Card(9, "金字塔", 0, 內政, 奇蹟, 紫色, "奇蹟", "內政點數+1", "3,2,1"));
+        list.add(new Card(10, "專制", 0, 內政, 科技, 橙色, "政府", "內政點數+4，軍事點數+2", "0"));
+        list.add(new Card(6, "亞歷山大圖書館", 0, 內政, 奇蹟, 紫色, "奇蹟", "科技生產+1，文化生產+1，內政手牌上限+1，軍事手牌上限+1", "1,2,2,1"));
+        list.add(new Card(54, "法典", 1, 內政, 科技, 藍色, "內政", "內政點數+1", "6"));
+        return list;
+    }
+
     public List<Card> get時代A內政牌() {
         List<Card> 時代A內政牌 = new ArrayList<>();
         for (int k = 0; k < cards.size(); k++) {
@@ -137,7 +169,7 @@ public class Cards implements CardType {
         //
         init政府 = new Card(10, "專制", 0, 內政, 科技, 橙色, "政府", "內政點數+4，軍事點數+2", "0");
 
-        System.out.println("   initial Govt card, done");
+//        System.out.println("   initial Govt card, done");
         //
         // 1.2 Other 5 cards
         //
@@ -165,8 +197,8 @@ public class Cards implements CardType {
         initCards.add(new Card(15, "青銅", 0, 內政, 科技, 棕色, "礦山", "資源生產+1", "2"));
         initCards.add(new Card(14, "戰士", 0, 內政, 科技, 紅色, "步兵", "軍力+1", "2"));
 
-         //Card init政府=
-        System.out.println("   initial 5 cards,哲學/宗教/農業/青銅/戰士 , done");
+        //Card init政府=
+//        System.out.println("   initial 5 cards,哲學/宗教/農業/青銅/戰士 , done");
 
         //
         // 1. Cards for Card Row
@@ -177,6 +209,7 @@ public class Cards implements CardType {
         cards.add(new Card(3, "凱薩", 0, 內政, 領袖, 綠色, "領袖", "軍力+1，軍事點數+1", "0"));
         cards.add(new Card(4, "摩西", 0, 內政, 領袖, 綠色, "領袖", "擴充人口，食物需求-1", "0"));
         cards.add(new Card(5, "漢摩拉比", 0, 內政, 領袖, 綠色, "領袖", "內政點數+1，軍事點數-1", "0"));
+
         cards.add(new Card(6, "亞歷山大圖書館", 0, 內政, 奇蹟, 紫色, "奇蹟", "科技生產+1，文化生產+1，內政手牌上限+1，軍事手牌上限+1", "1,2,2,1"));
 
         cards.add(new Card(7, "巨人像", 0, 內政, 奇蹟, 紫色, "奇蹟", "軍力+1，文化生產+1，殖民點數+1", "3,3"));
@@ -226,6 +259,7 @@ public class Cards implements CardType {
         cards.add(new Card(51, "河蟹娛樂", 1, 內政, 科技, 灰色, "競技場", "軍力+1，笑臉+2", "3"));
         cards.add(new Card(52, "戲劇", 1, 內政, 科技, 灰色, "劇院", "文化生產+2，笑臉+1", "4"));
         cards.add(new Card(53, "戲劇", 1, 內政, 科技, 灰色, "劇院", "文化生產+2，笑臉+1", "4"));
+
         cards.add(new Card(54, "法典", 1, 內政, 科技, 藍色, "內政", "內政點數+1", "6"));
         cards.add(new Card(55, "灌溉", 1, 內政, 科技, 棕色, "農場", "食物生產+2", "3"));
         cards.add(new Card(56, "灌溉", 1, 內政, 科技, 棕色, "農場", "食物生產+2", "3"));

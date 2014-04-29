@@ -75,26 +75,26 @@ public class Card implements CardType {
         yellowPoints = new Points();
 
         if (右上.equals("政府")) {
-            System.out.print("卡名:" + 卡名);
-            System.out.println(" ... constructor of Card, for 政府 card, to parse " + 內容);
+//            System.out.print("卡名:" + 卡名);
+//            System.out.println(" ... constructor of Card, for 政府 card, to parse " + 內容);
             String cmd = 內容;
             String[] strTokens = cmd.split("，");// **it's in Chinese, 2 bytes***
             //   List<String> tokens = new ArrayList<>();
             for (String item : strTokens) {
                 if (item.length() > 0) {
-                    System.out.println("    =>" + item);
+//                    System.out.println("    =>" + item);
                     //         tokens.add(item);
                     String[] strTokens2 = item.split("[+]");
 //                    String[] strTokens2 = item.split("=");// **it's in English, 1 byte***
 //      
 
                     if (strTokens2[0].equals("內政點數")) {
-                        System.out.println("     =>=>" + strTokens2[1] + " for 內政點數, whitePoints");
+//                        System.out.println("     =>=>" + strTokens2[1] + " for 內政點數, whitePoints");
 
                         this.whitePoints.setPoints(Integer.parseInt(strTokens2[1]));
                     }
                     if (strTokens2[0].equals("軍事點數")) {
-                        System.out.println("     =>=>" + strTokens2[1] + " for 軍事點數, redPoints");
+//                        System.out.println("     =>=>" + strTokens2[1] + " for 軍事點數, redPoints");
                         this.redPoints.setPoints(Integer.parseInt(strTokens2[1]));
 
                     }

@@ -33,6 +33,8 @@ public class Engine {
 
     public boolean doCmd(String keyword) throws IOException, AgesException {
         switch (keyword) {
+            case "debug"://v0.59
+            return core.doDebug();
             case "increase-population"://v0.52
             case "population"://v0.52
                 return core.doIncreasePopulation();
@@ -105,10 +107,16 @@ public class Engine {
     public boolean doVersion() {
 
         System.out.println();
-                System.out.println("  === ver 0.58 ===  2014-4-29, 10:51, by Max　");
+//                System.out.println("  === ver 0.60 ===  2014-4-29, 12:13, by Max　");
+//        System.out.println("    1. 新增DEBUG指令完成 ");
+//        System.out.println("    2.手牌上限值的定義，為當前板塊上的內政點數和");
+        System.out.println("  === ver 0.59 ===  2014-4-29, 11:13, by Max　");
+        System.out.println("    1. 新增DEBUG指令，並顯示手牌上限相關的卡名及其內容 ");
+        System.out.println("    2.手牌上限值的定義，為當前板塊上的內政點數和");
+        System.out.println("  === ver 0.58 ===  2014-4-29, 10:51, by Max　");
         System.out.println("    1. 修正*DEBUG 時代A的6張沒有被移除，仍然出現在第一次補牌 ");
         System.out.println("    ");
-                System.out.println("  === ver 0.57.1 ===  2014-4-29, 10:00, by Max　");
+        System.out.println("  === ver 0.57.1 ===  2014-4-29, 10:00, by Max　");
         System.out.println("    1. *DEBUG 時代A的6張沒有被移除，仍然出現在第一次補牌 ");
         System.out.println();
 
